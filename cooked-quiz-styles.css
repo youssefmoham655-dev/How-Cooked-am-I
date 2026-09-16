@@ -12,10 +12,31 @@ html, body {
 }
 .question-area{
     width:500px;
-    height:300px;
+    height:350px;
     background-color:rgb(38, 36, 36);
     border-radius:10px;
     display:flex;
     flex-direction:column;
-    
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+}
+.answers{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+}
+.question{
+    width:300px;
+    height:60px;
+    border:solid gold;
+    border-radius:20px;
+    color:gold;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
 }
