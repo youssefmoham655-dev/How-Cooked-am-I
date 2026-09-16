@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     overflow-x: hidden;
 }
-.page{
+#page{
     width:100%;
     height:100%;
     display:flex;
@@ -28,7 +28,7 @@ html, body {
     justify-content:center;
     gap:15px;
 }
-.question{
+#yes{
     width:300px;
     height:60px;
     border:solid gold;
@@ -39,4 +39,35 @@ html, body {
     align-items:center;
     justify-content:center;
     cursor:pointer;
+}
+#no{
+    width:300px;
+    height:60px;
+    border:solid gold;
+    border-radius:20px;
+    color:gold;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+.question-orig{
+    width:300px;
+    height:60px;
+    border:solid gold;
+    border-radius:20px;
+    color:gold;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+#yes:hover{
+    border:solid lightblue;
+    color:lightblue;
+}
+#no:hover{
+    border:solid lightblue;
+    color:lightblue;
 }
