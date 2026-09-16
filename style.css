@@ -10,7 +10,10 @@ body{
     margin:0px;
     padding:0px;
     box-sizing: border-box;
-    background-color: black;
+    background-image: radial-gradient(circle at center, #000000ec 0%, #000000a4 100%) , url(image.png);
+    display:grid;
+    place-items: center;
+    min-height: 100dvh;
 }
 h1{
     color: white;
@@ -28,4 +31,11 @@ button{
     border-radius: 4px;
     padding:6px;
     border : 2px solid var(--primary-color);
+}
+.main{
+   display: flex;
+   flex-direction:column;
+   align-self:center;
+   justify-self: center;
+   align-items: center;
 }
