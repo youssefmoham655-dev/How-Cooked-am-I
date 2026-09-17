@@ -33,6 +33,8 @@ const images_array = [
 ]
 let current_index = 0
 let answers =[]
+let amount = ""
+let amount2 = ""
 
 
 function showquestion() {
@@ -42,7 +44,39 @@ function showquestion() {
         } else {
         question_area.style.display = "none"
         result_area.style.display = "flex"
-        result_area.innerHTML = "<h1>hello</h1>"
+
+        const numberOfYesCount = answers.filter(answer => answer == "yes").length
+
+        const precentage = Math.round((numberOfYesCount / questions.length) * 100)
+
+        if (precentage <= 15) {
+            amount = "You are Freshly Baked"
+            amount2 = "You are suspiciously functional."
+        } else if (precentage <= 35) {
+            amount = "Slightly Toasted"
+            amount2 = "There are minor signs of academic damage."
+        } else if (precentage <= 55){
+            amount = "Getting Crispy 🔥"
+            amount2 = "Your productivity has begun leaving the chat."
+        } else if (precentage <= 75) {
+            amount = "Deep Fried 🍟"
+            amount2 = "You are no longer procrastinating, you have entered a lifestyle."
+        } else if (precentage <= 75) {
+            amount = "Charcoal"
+            amount2 = "At this point you're opening your laptop purely for emotional support."
+        } else if (precentage <= 100) {
+            amount = "Nuclear ☢️"
+            amount2 = ""
+        } else {
+            amount = "Nuclear ☢️"
+            amount2 = "Absolute system failure."
+        }
+        result_area.innerHTML = `
+            <h3 id="report">YOUR COOKED REPORT</h3>
+            <h5>Cookedness: ${precentage}%</h5>
+            <h5>Academic damage: ${amount}</h5>
+            <button id="accept" onclick="window.location.href='index.html'">I ACCEPT MY FATE</button>
+        `
     }
 }
 
