@@ -59,7 +59,11 @@ a{
 a:hover{
     color:var(--primary-color);
 }
-
+#startQuizzBtn:hover{
+   cursor: pointer;
+   background-color: white;
+   color: var(--primary-color);
+}
 @keyframes fire{
     0% {
         box-shadow: 0 0 10px #ff3300, 0 0px 20px #ff6600, 0 0px 30px #ffcc00,0 0 40px rgba(255, 51, 0, 0.6);
