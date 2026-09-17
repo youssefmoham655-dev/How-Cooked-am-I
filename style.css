@@ -26,11 +26,11 @@ p{
   font-family: var(--font-secondry);
 }
 button{
-    font-family: var(--font-secondry);
+    font-family: var(--primary-font);
     background-color: #ff3300;
     color:white;
     border-radius: 4px;
-    margin:6px;
+    margin:20px;
     padding:8px;
     border : 0px solid var(--primary-color);
     font-size:2.5rem;
@@ -46,6 +46,19 @@ button{
     animation: fire 3s infinite alternate steps(5);
 }
 
+footer{
+    position: fixed;
+    bottom: 1px;
+    font-family: var(--font-secondry);
+    color: var(--primary-color);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color:var(--primary-color);
+}
 
 @keyframes fire{
     0% {
