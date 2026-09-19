@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root{
+   --bg-color : #FFF4D6;
+   --h-color : #2e378b;
+   --h-font : 'Bowlby One SC';
+   --body-font : 'Inter';
+}
+html{
+    font-size: 61.5%;
+}
+body{
+    margin:0rem;
+    padding:0rem;
+    box-sizing: border-box;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
