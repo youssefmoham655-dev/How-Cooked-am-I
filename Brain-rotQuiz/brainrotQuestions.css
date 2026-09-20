@@ -37,6 +37,9 @@ h1{
     margin-bottom: 0rem;
     transform: rotate(1.5deg);
 }
+h1:hover{
+    transform: rotate(-1.5deg);
+}
 h3{
     color: var(--h-color);
     align-self: center;
@@ -56,13 +59,36 @@ button{
     padding:1rem;
     font-size: 2rem;
 }
+button:hover{
+    background-color: var(--h-color);
+    transform: rotate(2deg);
+}
 form{
     display: flex;
     flex-direction: column;
 }
 header{
     display: flex;
+    justify-content: space-between;
+    padding:1rem;
+    font-size:1.5rem;
+    color:var(--bg-color);
+    font-family:var(--body-font);
     flex-direction: row;
-    justify-content: space-betwen;
-    color:var(--bg-color)
+    align-items: center;
+
+}
+label{
+    font-size:1.5rem;
+    cursor: pointer;
+}
+section{
+    border-radius: 1.2rem;
+    border: 0.4rem solid var(--gray);
+    padding:0.4rem;
+    margin:0.4rem;
+}
+p{
+    font-size:1.2rem;
+
 }

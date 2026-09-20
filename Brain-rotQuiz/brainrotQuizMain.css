@@ -5,7 +5,7 @@
    --h-color : #2e378b;
    --h-font : 'Bowlby One SC';
    --body-font : 'Inter';
-   
+
 }
 html{
     font-size: 61.5%;
@@ -64,6 +64,10 @@ button{
     align-self:center;
     font-size: 3rem;
     margin-top:0.4rem;
+}
+button a{
+    color:var(--bg-color);
+    font-size:3rem;
 }
 button:hover {
     transform: translateY(-2px);
