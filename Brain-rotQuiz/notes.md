@@ -1,6 +1,3 @@
-Oh perfect! That makes it way better! Here are **image-based question ideas**:
-
-## **Visual Quiz Questions:**
 
 **1. "Identify This Specimen"**
 - Show image of Tralalero Tralala (shark with Nikes)
@@ -45,11 +42,6 @@ Oh perfect! That makes it way better! Here are **image-based question ideas**:
 - Use **glitch effects** or **distortion** on some images for extra brainrot feel
 
 
------ 
-
-Absolutely! To make a true "Italian Brainrot" quiz, you need to test their knowledge of the specific creatures and their chaotic lore. 
-
-Here are **10 questions** ranging from easy to "your brain is completely cooked" levels. I've included the correct answers and some funny wrong options!
 
 ### **Level 1: The Basics (Are you just a casual?)**
 
@@ -116,15 +108,3 @@ Here are **10 questions** ranging from easy to "your brain is completely cooked"
 *   B) Call the police
 *   C) Ask for his shoe size
 *   D) **Say "Tralalero Tralala" and join him** *(Correct for max brainrot)*
-
----
-
-### ** Suggestions for the Results Page:**
-
-To make it fun, give them a "Brainrot Diagnosis" at the end based on their score:
-
-*   **0-3 Correct:** 🧠 **Pure Brain:** "You have never touched grass, but you've never touched brainrot either. You are safe... for now."
-*   **4-7 Correct:** 🫠 **Slightly Cooked:** "You know your stuff, but you still have a shred of sanity left. Tralalero is watching you."
-*   **8-10 Correct:**  **100% Brainrotted:** "There is no hope for you. Your brain is completely fried. Welcome to the Italian Brainrot Zoo. 🦈👟"
-
-**Pro-tip for the UI:** When they get a question wrong, you could play a funny "error" sound or flash the screen red for a split second to add to the chaotic vibe!

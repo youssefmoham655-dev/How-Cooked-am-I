@@ -10,7 +10,7 @@ questionsData = [
 
     {
         Question: "What sound does the tree monkey make?",
-        image: "imgs/image.png",
+        image: "imgs/imagecopy5.png",
         options: ["Tung Tung", "Brr Brr Patapim", "Tralalero", "Meow"],
         correctAnswer: "Brr Brr Patapim",
         hint : "🔊 Hint: It sounds like a machine gun going off"
@@ -73,6 +73,7 @@ label4 = document.getElementById("label4");
 questionPlaceHolder = document.querySelector("h1");
 hint = document.getElementById("hint");
 resultPlaceHolder = document.getElementById("ResultBullshit");
+questionNumDisplay = document.getElementById("questionNum");
 
 let selected = document.querySelector('input[name="answer"]:checked');
 
@@ -92,39 +93,52 @@ function updataQuestion(){
     currentHint = questionData.hint;
 
     img.src = currentImage;
-    questionPlaceHolder.texrContent = currentQuestion;
+    questionPlaceHolder.textContent = currentQuestion;
     label1.textContent = questionData.options[0];
     label2.textContent = questionData.options[1];
     label3.textContent = questionData.options[2];
     label4.textContent = questionData.options[3];
     hint.textContent =  currentHint;
+
+    questionNumDisplay.textContent = `Q ${questionNum + 1}`; 
+    document.querySelectorAll('input[name = "answer"]').forEach(radio =>
+    {
+        radio.checked = false;
+
+    })
+
 }
 
 function updataScore(){
    let selected = document.querySelector('input[name="answer"]:checked');
-   let questionData = questionsData[questionNum]; 
+   
       if (selected === null) {
        alert("Pick an option first! 🦈");
        return;
    }
-   if (questionNum < questionsData.length){
+   let questionData = questionsData[questionNum];
+   
+   if (selected.value === questionData.correctAnswer ) {
+    currentScore += 1;
+   }
 
-     questionPlaceHolder.texrContent = `Q ${questionNum}`
-     updataQuestion();
+   questionNum +=  1; 
+
+   if (questionNum < questionsData.length){
+    questionNumDisplay.textContent = `Q ${questionNum + 1}`
+    updataQuestion();
    }
    else{
     showResult()
    }
-   questionNum +=  1; 
-   if (selected.value === questionData.correctAnswer ) {
-    currentScore += 1;
-   }
+  
 }
+
 function caculateResult(){
     let precent = (currentScore / questionsData.length) * 100;
     let resutlBullshit = "";
     if(precent === 100){
-        resutlBullshit = "🫠 100% BRAINROTTED - Your brain is completely fried! Welcome to the zoo!""
+        resutlBullshit = "🫠 100% BRAINROTTED - Your brain is completely fried! Welcome to the zoo!"
     }
     else if(precent > 75){
         resutlBullshit = "😵 Heavily Cooked - You watch way too much TikTok!"
@@ -139,14 +153,32 @@ function caculateResult(){
     return
 }
 
-}
 function showResult(){
-  resultDiv.classList.remove('.hidden');
-  mainDiv.classList.add('.hidden');
+  resultDiv.classList.remove('hidden');
+  mainDiv.classList.add('hidden');
   resultDiv.classList.add('mainDiv');
-  caculateResult();
+  let precent = (currentScore / questionsData.length) * 100;
+  let resutlBullshit = "";
+  if(precent === 100){
+        resutlBullshit = "🫠 100% BRAINROTTED - Your brain is completely fried! Welcome to the zoo!"
+    }
+  else if(precent > 75){
+        resutlBullshit = "😵 Heavily Cooked - You watch way too much TikTok!"
+    }
+  else if( precent > 50){
+        resutlBullshit = "🤔 Semi-Brainrotted - You're getting there..."
+
+    }
+  else {
+        resutlBullshit = "🧠 Pure Brain - You're safe... for now. Touch some grass!"
+    }
   resultPlaceHolder.textContent = resutlBullshit;
 }
 
-
- 
+function restart(){
+    questionNum= 0;
+    currentScore = 0;
+    resultDiv.classList.add('hidden');
+    mainDiv.classList.remove('hidden');
+    updataQuestion();
+}

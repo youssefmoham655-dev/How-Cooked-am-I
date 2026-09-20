@@ -62,6 +62,7 @@ button{
 button:hover{
     background-color: var(--h-color);
     transform: rotate(2deg);
+    cursor: pointer;
 }
 form{
     display: flex;
