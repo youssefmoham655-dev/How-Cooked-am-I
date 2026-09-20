@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root{
+   --bg-color : #FFF4D6;
+   --h-color : #2e378b;
+   --h-font : 'Bowlby One SC';
+   --body-font : 'Inter';
+   --gray: #171717;
+   --red : #D62828;
+}
+html{
+    font-size: 61.5%;
+}
+body{
+    margin:0rem;
+    padding:0rem;
+    box-sizing: border-box;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    background-color: var(--h-color);
+}
+.mainDiv{
+    margin:auto;
+    background-color: var(--bg-color);
+    border: 0.4rem solid var(--gray);
+    border-radius: 1.8rem;
+    padding:2rem;
+    font-family: var(--body-font);
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-family: var(--h-font);
+    align-self: center;
+    font-weight: 100;
+    margin-bottom: 0rem;
+    transform: rotate(1.5deg);
+}
+h1:hover{
+    transform: rotate(-1.5deg);
+}
+h3{
+    color: var(--h-color);
+    align-self: center;
+    margin-top:0rem;
+}
+img{
+    border-radius: 1.8rem;
+    width:50rem;
+}
+button{
+    background-color: var(--red);
+    color:var(--bg-color);
+    font-family: inherit;
+    align-self: center;
+    border: 0.2rem solid var(--gray);
+    border-radius: 1rem;
+    padding:1rem;
+    font-size: 2rem;
+}
+button:hover{
+    background-color: var(--h-color);
+    transform: rotate(2deg);
+    cursor: pointer;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding:1rem;
+    font-size:1.5rem;
+    color:var(--bg-color);
+    font-family:var(--body-font);
+    flex-direction: row;
+    align-items: center;
+
+}
+label{
+    font-size:1.5rem;
+    cursor: pointer;
+}
+section{
+    border-radius: 1.2rem;
+    border: 0.4rem solid var(--gray);
+    padding:0.4rem;
+    margin:0.4rem;
+}
+p{
+    font-size:1.2rem;
+
+}
+.ResultDiv{
+    margin:auto;
+    background-color: var(--bg-color);
+    border: 0.4rem solid var(--gray);
+    border-radius: 1.8rem;
+    padding:2rem;
+    font-family: var(--body-font);
+    display: flex;
+    flex-direction: column;
+}
+.hidden {
+    display: none;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="brainrotQuestions.css" rel="stylesheet">
+    <title>are you brainrotted?😰</title>
+</head>
+<body>
+    <header>
+        <span>Are you brainrotted?😰</span>
+        <span id="questionNum">Q1</span>
+    </header>
+    <div class="mainDiv">
+        <h1>who is this character ?</h1>
+        <h3>you know it dont you ?🤨</h3>
+
+        <section>
+            <p id="hint">⚠ Hint: He loves the beach, but hates taking his Nikes off.</p>
+            <img src="imgs/image copy.png">
+        </section>
+
+        <form action="submit">
+
+          <div class="choiceBtn">
+            <input type="radio" id="choice1" name="answer">
+            <label for="choice1" id="label1">Tralalero Tralala</label></input>
+        </div>
+
+          <div class="choiceBtn">
+            <input type="radio" id="choice2" name="answer">
+            <label for="choice2" id="label2">Bombardio Crocodilo</label></input>
+        </div>
+
+          <div class="choiceBtn">
+            <input type="radio" id="choice3" name="answer">
+            <label for="choice3" id="label3">Jaws Nike</label></input>
+        </div>
+
+          <div class="choiceBtn">
+            <input type="radio" id="choice4" name="answer">
+            <label for="choice4" id="label4">Blue Speedster</label></input>
+        </div>
+
+            <button ondblclick="updataScore()" type="button">continue</button>
+
+        </form>
+    </div>
+
+    <div id="resultDiv" class="hidden">
+        <h1> QUIZ COMPLETE 🥳</h1>
+         <h3 id="ResultBullshit"></h3>
+         <button id="restart" onclick="restart()">try again ! </button>
+    </div>
+
+
+    <footer>
+        <a href="">want more quizzes ?</a>
+    </footer>
+    <script src="main.js"></script>
+</script>
+</body>
+</html>
