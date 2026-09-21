@@ -11,6 +11,8 @@ const precentage = document.getElementById("precntage");
 const innercontent = document.getElementById("innercontent");
 const h5 = document.getElementById("h5");
 const resultverdict = document.getElementById("resultverdict");
+const solve = document.getElementById("solve");
+const home = document.getElementById("home");
 let currentQuestionId = 1;
 nextButton.style.display = "none";
 
@@ -70,7 +72,7 @@ let questions = [
         question: "A rooster lays an egg on top of a roof. Which way does the egg roll?",
         options: ["A) Left", "B) Right", "C) Down the roof", "D) Roosters don't lay eggs"],
         correctAnswer: 3,
-        reason: "D) Roosters don't lay eggs"
+        reason: "Roosters don't lay eggs"
     },
     {
         id: 9,
@@ -134,7 +136,8 @@ nextButton.addEventListener("click", () => {
         } else {
             resultverdict.textContent = "YOU ARE NOT THINKING.";
         }
-        
+        home.style.display = "block"
+        solve.style.display = "block"
         return;
     }
     currentQuestionId++;
