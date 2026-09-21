@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #F6F3EE;
+    font-family: 'Kalam', cursive;
+}
+.fullpage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8vw;
+    padding: 5vh 8vw;
+    font-size: larger;
+}
+.fullpage > div {
+    flex: 1;
+} /* AI helped me for this tbh */
+#imageofareuactuallythinking {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.buttontotest{
+    width:200px;
+    height:30px;
+    border-radius:4px;
+    background-color:#1E2730;
+    color:white;
+    font-family: 'Kalam', cursive;
+    cursor:pointer;
+    border:none;
+}
+#h1{
+    position:relative;
+    display:inline-block;
+    isolation:isolate;
+}
+#h1::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:2px;
+    width:100%;
+    height:8px;
+    background:#F5D547;
+    z-index:-1;
+    transform:rotate(-1deg);
+}
