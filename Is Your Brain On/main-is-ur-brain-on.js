@@ -9,6 +9,8 @@ const reason = document.getElementById("reason");
 
 let currentQuestionId = 1;
 nextButton.style.display = "none";
+
+let sequence = 1
 let questions = [
     {
         id: 1,
@@ -43,7 +45,7 @@ let questions = [
         question: "What's next?\n 1, 11, 21, 1211, 111221, ?",
         options: ["312211", "111321", "211221", "123456"],
         correctAnswer: 0,
-        reason: "The ball is $0.05 and the bat is $1.05, which adds up to $1.10."
+        reason: "This is the (look-and-say) sequence."
     },
     {
         id: 6,
@@ -109,9 +111,11 @@ function showQuestion(questionsId) {
     [ans1, ans2, ans3, ans4].forEach((answerElement, index) => {
         answerElement.textContent = question.options[index];
     });
+    numberOfQuestions.textContent = sequence;
 }
 nextButton.addEventListener("click", () => {
     currentQuestionId++;
+    sequence++;
     showQuestion(currentQuestionId);
     choices.forEach(choice => {
         choice.style.backgroundColor = "";
