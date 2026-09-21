@@ -75,7 +75,7 @@ function showquestion() {
             <h3 id="report">YOUR COOKED REPORT</h3>
             <h5>Cookedness: ${precentage}%</h5>
             <h5>Academic damage: ${amount}</h5>
-            <button id="accept" onclick="window.location.href='index-how-cooked-am-i.html'">I ACCEPT MY FATE</button>
+            <button id="accept" onclick="window.location.href='index.html'">I ACCEPT MY FATE</button>
         `
     }
 }
