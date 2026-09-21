@@ -110,29 +110,29 @@ function updataQuestion(){
 }
 
 function updataScore(){
-   let selected = document.querySelector('input[name="answer"]:checked');
-   
-      if (selected === null) {
-       alert("Pick an option first! 🦈");
-       return;
-   }
-   let questionData = questionsData[questionNum];
-   
-   if (selected.value === questionData.correctAnswer ) {
-    currentScore += 1;
-   }
+    let selected = document.querySelector('input[name="answer"]:checked');
+    
+        if (selected === null) {
+        alert("Pick an option first! 🦈");
+        return;
+    }
+    let questionData = questionsData[questionNum];
+    
+    if (selected.value === questionData.correctAnswer ) {
+        currentScore += 1;
+    }
 
-   questionNum +=  1; 
+    questionNum +=  1; 
 
-   if (questionNum < questionsData.length){
-    questionNumDisplay.textContent = `Q ${questionNum + 1}`
-    updataQuestion();
-   }
-   else{
-    showResult()
-   }
-  
-}
+    if (questionNum < questionsData.length){
+        questionNumDisplay.textContent = `Q ${questionNum + 1}`
+        updataQuestion();
+    }
+    else{
+        showResult()
+    }
+    
+    }
 
 function caculateResult(){
     let precent = (currentScore / questionsData.length) * 100;
@@ -154,25 +154,25 @@ function caculateResult(){
 }
 
 function showResult(){
-  resultDiv.classList.remove('hidden');
-  mainDiv.classList.add('hidden');
-  resultDiv.classList.add('mainDiv');
-  let precent = (currentScore / questionsData.length) * 100;
-  let resutlBullshit = "";
-  if(precent === 100){
-        resutlBullshit = "🫠 100% BRAINROTTED - Your brain is completely fried! Welcome to the zoo!"
-    }
-  else if(precent > 75){
-        resutlBullshit = "😵 Heavily Cooked - You watch way too much TikTok!"
-    }
-  else if( precent > 50){
-        resutlBullshit = "🤔 Semi-Brainrotted - You're getting there..."
+    resultDiv.classList.remove('hidden');
+    mainDiv.classList.add('hidden');
+    resultDiv.classList.add('mainDiv');
+    let precent = (currentScore / questionsData.length) * 100;
+    let resutlBullshit = "";
+    if(precent === 100){
+            resutlBullshit = "🫠 100% BRAINROTTED - Your brain is completely fried! Welcome to the zoo!"
+        }
+    else if(precent > 75){
+            resutlBullshit = "😵 Heavily Cooked - You watch way too much TikTok!"
+        }
+    else if( precent > 50){
+            resutlBullshit = "🤔 Semi-Brainrotted - You're getting there..."
 
-    }
-  else {
-        resutlBullshit = "🧠 Pure Brain - You're safe... for now. Touch some grass!"
-    }
-  resultPlaceHolder.textContent = resutlBullshit;
+        }
+    else {
+            resutlBullshit = "🧠 Pure Brain - You're safe... for now. Touch some grass!"
+        }
+    resultPlaceHolder.textContent = resutlBullshit;
 }
 
 function restart(){
