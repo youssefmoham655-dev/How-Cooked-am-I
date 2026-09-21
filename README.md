@@ -44,5 +44,5 @@ using demo link, it's web playable
 ai was used to generate questions for website
 
 ## Screenshots:
-<img src="../How-Cooked-am-I\Screenshot 2026-09-21 091545.png">
-<img src="../How-Cooked-am-I\Screenshot 2026-09-21 091727.png">
+<img src="./Screenshot 2026-09-21 091545.png">
+<img src="./Screenshot 2026-09-21 091727.png">
