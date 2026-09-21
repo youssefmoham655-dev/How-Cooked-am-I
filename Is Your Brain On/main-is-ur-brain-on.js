@@ -6,7 +6,11 @@ const ans3 = document.getElementById("ans3");
 const ans4 = document.getElementById("ans4");
 const nextButton = document.getElementById("nextbutton");
 const reason = document.getElementById("reason");
-
+const result = document.getElementById("result");
+const precentage = document.getElementById("precntage");
+const innercontent = document.getElementById("innercontent");
+const h5 = document.getElementById("h5");
+const resultverdict = document.getElementById("resultverdict");
 let currentQuestionId = 1;
 nextButton.style.display = "none";
 
@@ -114,9 +118,27 @@ function showQuestion(questionsId) {
     numberOfQuestions.textContent = sequence;
 }
 nextButton.addEventListener("click", () => {
+    if (currentQuestionId === questions.length) {
+        const numberOfCorrect = userchoise.filter((answer, index) => {
+            return answer === questions[index].correctAnswer;
+        }).length;
+        const percentage = Math.round(
+            (numberOfCorrect / questions.length) * 100
+        );
+        innercontent.style.display = "none";
+        result.style.display = "flex";
+        precentage.textContent = `${percentage}%`;
+        h5.textContent = `You got ${numberOfCorrect} out of ${questions.length} correct.`;
+        if (percentage >= 50) {
+            resultverdict.textContent = "YOU ARE THINKING.";
+        } else {
+            resultverdict.textContent = "YOU ARE NOT THINKING.";
+        }
+        
+        return;
+    }
     currentQuestionId++;
     sequence++;
-    showQuestion(currentQuestionId);
     choices.forEach(choice => {
         choice.style.backgroundColor = "";
         choice.style.pointerEvents = "auto";
