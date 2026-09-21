@@ -19,7 +19,7 @@ body {
 }
 .question{
     width:750px;
-    height:400px;
+    height:450px;
     background-color:rgb(197, 196, 196);
     border-radius:10px;
     display:flex;
@@ -59,6 +59,7 @@ body {
     justify-content:center;
     background-color:white;
     border-radius:8px;
+    cursor:pointer;
 }
 #nextbutton{
     width:90px;
